@@ -1,4 +1,4 @@
-
+## This code is for calculating the statistics of disease pairs.
 
 ## input
 # df_patients: A dataframe containing patient information, including patient IDs, sex, age, diagnosis dates, and the primary diagnosis ICD codes.
