@@ -1,0 +1,1 @@
+Here is the code used for trajectory analysis in the article "Identifying and visualising temporal trajectories of hospitalisations for traditional and non-traditional complications in people with type 2 diabetes: A territory-wide population-based cohort study."
