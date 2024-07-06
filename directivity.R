@@ -1,6 +1,6 @@
 
 # This code is for directivity test for significant pairs.
-# df_stat is the output of disease pairs tests.
+# df_stat is the output of calculating the statistics of disease pairs.
 
 df_statistics<-df_stat%>%filter(p_bonferroni<0.05)
 dat_dia<- dat %>%
