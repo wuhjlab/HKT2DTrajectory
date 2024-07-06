@@ -83,11 +83,9 @@ diseases_summary_count <- function(df_patients, dat, N, seed = NULL, match_paral
 }
 
 dat <- as.data.frame(dat)
-if (!is.null(disease_icd)) {
-  dat_cases <- dat %>% mutate(date = as.numeric(date)) %>% filter(icd_main %in% disease_icd) %>% mutate(id1 = id, icd_main1 = icd_main) %>% group_by(id, icd_main) %>% filter(date == min(date)) %>% distinct() %>% ungroup() %>% group_by(icd_main) %>% nest()
-} else {
-  dat_cases <- dat %>% mutate(date = as.numeric(date)) %>% mutate(id1 = id, icd_main1 = icd_main) %>% group_by(id, icd_main) %>% filter(date == min(date)) %>% distinct() %>% ungroup() %>% group_by(icd_main) %>% nest()
-}
+
+dat_cases <- dat %>% mutate(date = as.numeric(date)) %>% mutate(id1 = id, icd_main1 = icd_main) %>% group_by(id, icd_main) %>% filter(date == min(date)) %>% distinct() %>% ungroup() %>% group_by(icd_main) %>% nest()
+
 
 ll <- dat_cases$icd_main
 dat_cases <- dat_cases$data
